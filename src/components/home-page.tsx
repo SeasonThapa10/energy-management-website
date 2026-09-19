@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, MotionConfig } from "framer-motion";
+import Link from "next/link";
 
-const contactEmail = "your-email@example.com";
+const contactEmail = "test@example.com";
 const contactLink = `mailto:${contactEmail}?subject=Energy%20monitoring%20enquiry`;
-
 
 const features = [
     {
@@ -30,47 +30,33 @@ const features = [
 export default function HomePage() {
     return (
         <MotionConfig reducedMotion="user" transition={{ duration: 0.4 }}>
-            <div className="min-h-screen bg-[#09140f] text-[#eef5e8] selection:bg-[#2b5635] selection:text-white">
-                <a
-                    href="#main-content"
-                    className="sr-only fixed left-4 top-4 z-50 bg-[#a6e57a] p-3 text-[#102016] focus:not-sr-only"
-                >
+            <div className="min-h-screen bg-neutral-950 text-green-50 selection:bg-green-800 selection:text-white">
+                <a href="#main-content" className="sr-only fixed left-4 top-4 z-50 bg-green-300 p-3 text-green-950 focus:not-sr-only">
                     Skip to content
                 </a>
 
-                {/* Navigation: these links lead to sections on this home page. */}
-                <header id="home" className="border-b border-[#223f2d]">
-                    <div className="mx-auto flex max-w-6xl flex-col gap-5 px-6 py-6 md:flex-row md:items-center md:justify-between">
+                {/* Navigation: Products opens another page; Contact jumps to the section below. */}
+                <header id="home" className="border-b border-green-900">
+                    <div className="mx-auto max-w-6xl px-6 flex flex-col gap-5 py-6 md:flex-row md:items-center md:justify-between">
                         <a
-                            href="#home"
+                            href="/"
                             aria-label="Energy Pulse home"
                             className="flex w-fit items-center gap-3 focus-visible:outline-2 focus-visible:outline-offset-4"
                         >
-              <span className="text-xl font-bold tracking-tight text-[#a6e57a] sm:text-2xl">
+              <span className="text-xl font-bold tracking-tight text-green-300 sm:text-2xl">
                 Energy Pulse
               </span>
-                            <span className="max-w-32 border-l border-[#2b4533] pl-3 text-xs font-medium leading-4 text-[#afc3b0]">
+                            <span className="max-w-32 border-l border-green-900 pl-3 text-xs font-medium leading-4 text-gray-300">
                 Energy Management System
               </span>
                         </a>
 
                         <nav aria-label="Main navigation" className="flex gap-6 text-sm font-medium">
-                            <a
-                                href="#features"
-                                className="border-b border-transparent py-2 transition-colors hover:border-[#a6e57a] hover:text-[#a6e57a] focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
-                                Features
-                            </a>
-                            <a
-                                href="#approach"
-                                className="border-b border-transparent py-2 transition-colors hover:border-[#a6e57a] hover:text-[#a6e57a] focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
-                                Our approach
-                            </a>
-                            <a
-                                href="#contact"
-                                className="border-b border-transparent py-2 transition-colors hover:border-[#a6e57a] hover:text-[#a6e57a] focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
+                            <Link href="/products" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
+                                Products
+                            </Link>
+
+                            <a href="#contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Contact
                             </a>
                         </nav>
@@ -85,8 +71,8 @@ export default function HomePage() {
                         animate={{ opacity: 1, y: 0 }}
                         className="mx-auto max-w-6xl px-6 pb-12 pt-14 sm:pt-20 lg:pt-24"
                     >
-                        <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-[#9fb8a0]">
-                            <span aria-hidden="true" className="h-1 w-8 bg-[#a6e57a]" />
+                        <p className="font-mono text-xs uppercase tracking-widest flex items-center gap-3 text-gray-400">
+                            <span aria-hidden="true" className="h-1 w-8 bg-green-300" />
                             IoT energy management
                         </p>
 
@@ -96,13 +82,13 @@ export default function HomePage() {
                                 className="text-5xl font-semibold leading-tight tracking-tight sm:text-7xl lg:col-span-2 lg:text-8xl"
                             >
                                 Your energy,
-                                <span className="block font-serif font-normal italic text-[#a6e57a]">
+                                <span className="block font-serif font-normal italic text-green-300">
                   under control.
                 </span>
                             </h1>
 
                             <div className="max-w-md lg:pb-3">
-                                <p className="text-lg leading-8 text-[#afc3b0]">
+                                <p className="text-lg leading-8 text-gray-300">
                                     Energy Pulse brings IoT hardware, AI-powered
                                     software, and energy expertise together to help industrial
                                     and commercial facilities use energy more efficiently.
@@ -111,14 +97,14 @@ export default function HomePage() {
                                     href="#contact"
                                     whileHover={{ y: -3 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="mt-7 inline-flex items-center gap-6 bg-[#a6e57a] px-6 py-4 text-sm font-semibold text-[#102016] transition-colors hover:bg-[#c1f29b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a6e57a]"
+                                    className="inline-flex items-center gap-6 px-6 py-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300 bg-green-300 text-green-950 hover:bg-green-200 mt-7"
                                 >
                                     Talk to our team <span aria-hidden="true">↗</span>
                                 </motion.a>
                             </div>
                         </div>
 
-                        <div className="mt-14 flex flex-col gap-3 border-t border-[#2b4533] pt-5 text-xs text-[#afc3b0] sm:flex-row sm:justify-between">
+                        <div className="mt-14 flex flex-col gap-3 border-t border-green-900 pt-5 text-xs text-gray-300 sm:flex-row sm:justify-between">
                             <p>Industrial facilities / Commercial buildings</p>
                             <p>Monitor. Optimize. Maintain.</p>
                         </div>
@@ -131,17 +117,17 @@ export default function HomePage() {
                         initial={{ opacity: 0.8, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        className="scroll-mt-6 border-y border-[#223f2d] bg-[#11271b] text-[#eef5e8]"
+                        className="scroll-mt-6 border-y border-green-950 bg-green-950 text-green-50"
                     >
-                        <div className="mx-auto grid max-w-6xl gap-8 px-6 py-14 md:grid-cols-3 md:py-16">
-                            <p className="font-mono text-xs uppercase tracking-widest text-[#a6e57a]">
+                        <div className="mx-auto max-w-6xl px-6 grid gap-8 py-14 md:grid-cols-3 md:py-16">
+                            <p className="font-mono text-xs uppercase tracking-widest text-green-300">
                                 Hardware, software, and expertise
                             </p>
                             <div className="md:col-span-2">
                                 <h2 id="approach-heading" className="text-3xl font-medium leading-tight sm:text-4xl">
                                     Connect the systems you already have.
                                 </h2>
-                                <p className="mt-5 max-w-2xl leading-8 text-[#afc3b0]">
+                                <p className="mt-5 max-w-2xl leading-8 text-gray-300">
                                     Connect existing meters, machines, and sensors through edge
                                     devices and gateways. Our energy management software turns
                                     that data into clear insights, helping your team find waste
@@ -157,16 +143,16 @@ export default function HomePage() {
                     <section
                         id="features"
                         aria-labelledby="features-heading"
-                        className="mx-auto max-w-6xl scroll-mt-6 px-6 py-16 sm:py-20"
+                        className="mx-auto max-w-6xl px-6 scroll-mt-6 py-16 sm:py-20"
                     >
-                        <p className="font-mono text-xs uppercase tracking-widest text-[#a6e57a]">
+                        <p className="font-mono text-xs uppercase tracking-widest text-green-300">
                             Energy intelligence in practice
                         </p>
                         <h2 id="features-heading" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
                             More insight. Better performance.
                         </h2>
 
-                        <div className="mt-10 border-b border-[#2b4533]">
+                        <div className="mt-10 border-b border-green-900">
                             {/* map() creates one feature row for each object in the array. */}
                             {features.map((feature) => (
                                 <motion.article
@@ -175,15 +161,15 @@ export default function HomePage() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, amount: 0.2 }}
                                     whileHover={{ x: 4 }}
-                                    className="grid gap-4 border-t border-[#2b4533] py-8 transition-colors hover:bg-[#11271b] md:grid-cols-12 md:gap-6"
+                                    className="grid gap-4 border-t border-green-900 py-8 transition-colors hover:bg-green-950 md:grid-cols-12 md:gap-6"
                                 >
-                  <span className="font-mono text-sm text-[#a6e57a] md:col-span-1">
+                  <span className="font-mono text-sm text-green-300 md:col-span-1">
                     {feature.number}
                   </span>
                                     <h3 className="text-2xl font-medium tracking-tight md:col-span-4">
                                         {feature.title}
                                     </h3>
-                                    <p className="max-w-xl leading-7 text-[#afc3b0] md:col-span-7">
+                                    <p className="max-w-xl leading-7 text-gray-300 md:col-span-7">
                                         {feature.description}
                                     </p>
                                 </motion.article>
@@ -195,17 +181,17 @@ export default function HomePage() {
                     <section
                         id="contact"
                         aria-labelledby="contact-heading"
-                        className="scroll-mt-6 border-y border-[#31513b] bg-[#143722] text-[#eef5e8]"
+                        className="scroll-mt-6 border-y border-green-950 bg-green-950 text-green-50"
                     >
-                        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-6 py-14 md:flex-row md:items-center md:justify-between md:py-16">
+                        <div className="mx-auto max-w-6xl px-6 flex flex-col items-start gap-8 py-14 md:flex-row md:items-center md:justify-between md:py-16">
                             <div className="max-w-2xl">
-                                <p className="font-mono text-xs uppercase tracking-widest text-[#a6e57a]">
+                                <p className="font-mono text-xs uppercase tracking-widest text-green-300">
                                     Let&apos;s talk about your facility
                                 </p>
                                 <h2 id="contact-heading" className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
                                     Put your energy data to work.
                                 </h2>
-                                <p className="mt-4 max-w-lg leading-7 text-[#c4d8c1]">
+                                <p className="mt-4 max-w-lg leading-7 text-gray-200">
                                     Tell us about your buildings, equipment, and energy goals.
                                     We can explore the right mix of monitoring, storage
                                     optimization, and technical support.
@@ -215,7 +201,7 @@ export default function HomePage() {
                                 href={contactLink}
                                 whileHover={{ y: -3 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="inline-flex shrink-0 items-center gap-6 border border-[#a6e57a] px-6 py-4 text-sm font-semibold text-[#a6e57a] transition-colors hover:bg-[#a6e57a] hover:text-[#102016] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#a6e57a]"
+                                className="inline-flex items-center gap-6 px-6 py-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300 border border-green-300 text-green-300 hover:bg-green-300 hover:text-green-950 shrink-0"
                             >
                                 Discuss your project <span aria-hidden="true">↗</span>
                             </motion.a>
@@ -223,8 +209,8 @@ export default function HomePage() {
                     </section>
                 </main>
 
-                <footer className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-7 text-xs text-[#afc3b0] sm:flex-row sm:justify-between">
-                    <p className="font-semibold text-[#eef5e8]">Energy Pulse</p>
+                <footer className="mx-auto max-w-6xl px-6 flex flex-col gap-2 py-7 text-xs text-gray-300 sm:flex-row sm:justify-between">
+                    <p className="font-semibold text-green-50">Energy Pulse</p>
                     <p>Connected hardware. Intelligent energy management.</p>
                 </footer>
             </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
-const title = "Energy Management";
+const title = "Energy Pulse";
 const description =
-    "Understand your energy consumption with IoT monitoring, actionable insights, and alerts for industrial and commercial facilities.";
+    "IoT energy monitoring, battery optimization, and predictive maintenance for industrial and commercial facilities.";
 
 export const metadata: Metadata = {
   title,
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    siteName: "Energy Management",
+    siteName: "Energy Pulse",
     type: "website",
   },
 };
