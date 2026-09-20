@@ -3,9 +3,6 @@
 import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 
-const contactEmail = "test@example.com";
-const contactLink = `mailto:${contactEmail}?subject=Energy%20monitoring%20enquiry`;
-
 const features = [
     {
         number: "01",
@@ -35,7 +32,7 @@ export default function HomePage() {
                     Skip to content
                 </a>
 
-                {/* Navigation: Products opens another page; Contact jumps to the section below. */}
+                {/* Navigate to the other pages. */}
                 <header id="home" className="border-b border-green-900">
                     <div className="mx-auto max-w-6xl px-6 flex flex-col gap-5 py-6 md:flex-row md:items-center md:justify-between">
                         <a
@@ -51,17 +48,18 @@ export default function HomePage() {
               </span>
                         </a>
 
-                        <nav aria-label="Main navigation" className="flex gap-6 text-sm font-medium">
+                        <nav aria-label="Main navigation" className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
                             <Link href="/products" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Products
                             </Link>
+
                             <Link href="/about" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 About
                             </Link>
 
-                            <a href="#contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
+                            <Link href="/contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Contact
-                            </a>
+                            </Link>
                         </nav>
                     </div>
                 </header>
@@ -97,7 +95,7 @@ export default function HomePage() {
                                     and commercial facilities use energy more efficiently.
                                 </p>
                                 <motion.a
-                                    href="#contact"
+                                    href="/contact"
                                     whileHover={{ y: -3 }}
                                     whileTap={{ scale: 0.98 }}
                                     className="inline-flex items-center gap-6 px-6 py-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300 bg-green-300 text-green-950 hover:bg-green-200 mt-7"
@@ -120,7 +118,7 @@ export default function HomePage() {
                         initial={{ opacity: 0.8, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        className="scroll-mt-6 border-y border-green-950 bg-green-950 text-green-50"
+                        className="scroll-mt-6 border-y border-green-900 bg-green-950 text-green-50"
                     >
                         <div className="mx-auto max-w-6xl px-6 grid gap-8 py-14 md:grid-cols-3 md:py-16">
                             <p className="font-mono text-xs uppercase tracking-widest text-green-300">
@@ -184,7 +182,7 @@ export default function HomePage() {
                     <section
                         id="contact"
                         aria-labelledby="contact-heading"
-                        className="scroll-mt-6 border-y border-green-950 bg-green-950 text-green-50"
+                        className="scroll-mt-6 border-y border-green-800 bg-green-900 text-green-50"
                     >
                         <div className="mx-auto max-w-6xl px-6 flex flex-col items-start gap-8 py-14 md:flex-row md:items-center md:justify-between md:py-16">
                             <div className="max-w-2xl">
@@ -201,7 +199,7 @@ export default function HomePage() {
                                 </p>
                             </div>
                             <motion.a
-                                href={contactLink}
+                                href="/contact"
                                 whileHover={{ y: -3 }}
                                 whileTap={{ scale: 0.98 }}
                                 className="inline-flex items-center gap-6 px-6 py-4 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-300 border border-green-300 text-green-300 hover:bg-green-300 hover:text-green-950 shrink-0"

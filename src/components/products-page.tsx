@@ -14,6 +14,7 @@ const products = [
         icon: Gauge,
         description:
             "A compact three-phase meter for measuring industrial loads through external current transformers. Push-in terminals simplify wiring, while communication interfaces connect readings to energy software.",
+        // https://www.apollo-gs.com/product-page/kdk-count-ct-cage-clamp-push-in
         specifications: [
             { label: "Nominal voltage", value: "3 × 230/400 V" },
             { label: "CT input current", value: "1.5 A reference / 5 A maximum" },
@@ -31,6 +32,7 @@ const products = [
         icon: Zap,
         description:
             "Measure imported and exported active and reactive energy at commercial consumption points. A Modbus interface makes the readings available to an energy management system.",
+        // https://www.apollo-gs.com/product-page/kdk-count3-pro
         specifications: [
             { label: "Nominal voltage", value: "3 × 230/400 V" },
             { label: "Maximum current", value: "100 A" },
@@ -48,6 +50,7 @@ const products = [
         icon: Network,
         description:
             "Connect serial Modbus meters to an Ethernet network so their readings can be collected centrally. Designed for compatible Professional-series energy meters.",
+        // https://www.apollo-gs.com/product-page/kdk-converter-modbus-rtu-to-modbus-tcp
         specifications: [
             { label: "Conversion", value: "Modbus RTU → Modbus TCP/IP" },
             { label: "Meter capacity", value: "Up to 50 compatible meters" },
@@ -66,6 +69,7 @@ export default function ProductsPage() {
                     Skip to content
                 </a>
 
+                {/* Next.js Link connects the Home, Products, and About pages. */}
                 <header className="border-b border-green-900">
                     <div className="mx-auto max-w-6xl px-6 flex flex-col gap-5 py-6 md:flex-row md:items-center md:justify-between">
                         <Link
@@ -81,7 +85,7 @@ export default function ProductsPage() {
               </span>
                         </Link>
 
-                        <nav aria-label="Main navigation" className="flex gap-6 text-sm font-medium">
+                        <nav aria-label="Main navigation" className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
                             <Link href="/" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Home
                             </Link>
@@ -95,13 +99,14 @@ export default function ProductsPage() {
                             <Link href="/about" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 About
                             </Link>
-                            <Link href="/#contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
+                            <Link href="/contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Contact
                             </Link>
                         </nav>
                     </div>
                 </header>
 
+                {/* This entrance animation runs when the Products page opens. */}
                 <motion.main
                     id="main-content"
                     tabIndex={-1}
@@ -133,6 +138,7 @@ export default function ProductsPage() {
                     </section>
 
                     <section aria-label="Energy management products" className="space-y-6">
+                        {/* One product card is created for each object in the array. */}
                         {products.map((product) => {
                             const Icon = product.icon;
 

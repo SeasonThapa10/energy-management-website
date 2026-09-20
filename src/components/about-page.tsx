@@ -73,10 +73,7 @@ export default function AboutPage() {
                             >
                                 About
                             </Link>
-                            <Link
-                                href="/#contact"
-                                className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4"
-                            >
+                            <Link href="/contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Contact
                             </Link>
                         </nav>
