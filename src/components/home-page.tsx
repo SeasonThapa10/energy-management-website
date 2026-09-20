@@ -55,6 +55,9 @@ export default function HomePage() {
                             <Link href="/products" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Products
                             </Link>
+                            <Link href="/about" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
+                                About
+                            </Link>
 
                             <a href="#contact" className="border-b border-transparent py-2 transition-colors hover:border-green-300 hover:text-green-300 focus-visible:outline-2 focus-visible:outline-offset-4">
                                 Contact
