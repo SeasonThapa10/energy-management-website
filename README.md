@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Energy Pulse
 
-## Getting Started
+A responsive website built for my internship assessment, showcasing energy monitoring products and services. Energy Pulse is a fictional company created for this project.
 
-First, run the development server:
+## Live website
 
+**Vercel URL:** [Energy Pulse](https://energy-management-website.vercel.app/)
+
+## Tech stack
+
+Next.js, TypeScript, Tailwind CSS, Framer Motion, and Lucide React. GitHub is used for the code submission, with Vercel as the deployment platform.
+
+## Pages
+
+- **Home:** introduction, key features, and contact links.
+- **Products:** descriptions, icons, and specifications.
+- **About:** company overview, mission, and a fictional team.
+- **Contact:** name, email, and message fields with basic validation.
+
+Each page has a title, meta description, and Open Graph metadata.
+
+## Run locally
+You'll need Node.js and npm installed.
 ```bash
+git clone https://github.com/SeasonThapa10/energy-management-website.git energy-management-website
+cd energy-management-website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- I chose a dark background with green accents to suit the energy theme.
+- Standard Tailwind classes keep the styling straightforward to edit.
+- Layouts adapt to mobile and desktop, with subtle scroll and hover animations that respect reduced motion preferences.
 
-## Learn More
+## Contact form
 
-To learn more about Next.js, take a look at the following resources:
+The form checks required fields and email format, then shows a demo confirmation. It does not send emails or save messages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content reference
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Content and product information are based on [Apollo Green Solutions](https://www.apollo-gs.com/), with my own layout and fictional team profiles.
